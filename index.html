@@ -2,11 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <title>AR Moon Light</title>
 
-  <!-- A-Frame -->
   <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-
-  <!-- AR.js (pakai versi yang sama seperti 2D kamu) -->
   <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
 </head>
 
@@ -14,16 +12,17 @@
 
 <a-scene embedded arjs>
 
-  <!-- Hiro Marker -->
   <a-marker preset="hiro">
 
-    <a-entity
-      gltf-model="moon.glb"
-      position="0 0 0"
-      scale="0.1 0.1 0.1"
-      rotation="0 0 0"
-      animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">
-    </a-entity>
+    <!-- Bulan 3D ringan -->
+    <a-sphere
+      position="0 0.5 0"
+      radius="0.5"
+      src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/moon.jpg"
+      segments-height="32"
+      segments-width="32"
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+    </a-sphere>
 
   </a-marker>
 
@@ -33,6 +32,3 @@
 
 </body>
 </html>
-
-
-
